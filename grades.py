@@ -16,12 +16,12 @@ def class_average(scores):
     """Return the average of a list of scores."""
     total = 0
     for score in scores:
-        total = score          # <-- BUG! Should be +=
+        total += score          # <-- BUG! Should be +=
     return total / len(scores)
 
 def highest_score(scores):
     """Return the highest score in the list."""
-    best = 0                   # <-- BUG! Should be scores[0]
+    best = scores[0]                   # <-- BUG! Should be scores[0]
     for score in scores:
         if score > best:
             best = score
